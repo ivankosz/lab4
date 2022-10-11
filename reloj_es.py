@@ -1,13 +1,9 @@
 from datetime import datetime, timedelta
 
 def reloj_español():
-    user_time=input('Ingrese una hora en formato HH:mm: ')
-    if user_time == '':
-        time=datetime.now()
-        user_time=datetime.strftime(time, '%H:%M')
-        hora=datetime.strptime(user_time, '%H:%M')
-    else:
-        hora=datetime.strptime(user_time, '%H:%M')
+    time=datetime.now()
+    user_time=datetime.strftime(time, '%H:%M')
+    hora=datetime.strptime(user_time, '%H:%M')
 
 
     h=''
@@ -69,6 +65,4 @@ def reloj_español():
     elif hora.hour==12 or hora.hour==0:
         h='las doce'
     
-    print(f'Son {h} {m}')
-
-reloj_español()
+    return (f'Son {h} {m}')

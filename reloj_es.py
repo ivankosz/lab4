@@ -1,7 +1,5 @@
 from datetime import datetime, timedelta
-
-from text-to-speach import decir_hora
-import text-to-speach
+from text_to_speach import *
 
 def reloj_español():
     time=datetime.now()
